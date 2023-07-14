@@ -8,7 +8,7 @@ st.set_page_config(page_title="Adi's Webpage",page_icon=":wave:",layout="wide")
 
 
 #assets
-with open("/Users/aditewari/Desktop/website/style/main.css") as f:
+with open("main.css") as f:
     st.markdown("<style>{}</style>".format(f.read()), unsafe_allow_html=True)
 
 def lottie_load_url(url):
