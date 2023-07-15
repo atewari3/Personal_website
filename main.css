@@ -3,7 +3,6 @@
 
 * {font-family: 'Readex Pro';}
 
-
 a {
     text-decoration: none;
     color: black !important;
@@ -14,7 +13,6 @@ a:hover {
     color: #9BCDD2 !important;
     text-decoration: none;
 }
-
 
 ul {list-style-type: none;}
 
@@ -60,4 +58,3 @@ input[type=message], input[type=email], input[type=text], textarea {
   #MainMenu {visibility: hidden;}
   footer {visibility: hidden;}
   header {visibility: hidden;}
-

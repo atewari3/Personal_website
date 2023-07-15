@@ -17,7 +17,7 @@ def lottie_load_url(url):
         return None
     return r.json()
 
-resume_file = "/Users/aditewari/Desktop/website/Aditya Tewari's Resume.pdf"
+resume_file = "Aditya Tewari's Resume.pdf"
 
 SOCIAL_MEDIA = {
     "LinkedIn": "https://www.linkedin.com/in/atewari3/",
@@ -26,7 +26,7 @@ SOCIAL_MEDIA = {
 
 lottie_coding = lottie_load_url("https://assets5.lottiefiles.com/private_files/lf30_wqypnpu5.json")
 lottie_work = lottie_load_url("https://assets3.lottiefiles.com/packages/lf20_9e8yoqkm.json")
-profile_photo = Image.open("/Users/aditewari/Desktop/website/profile_pic.png")
+profile_photo = Image.open("profile_pic.png")
 project_photo = lottie_load_url("https://assets9.lottiefiles.com/packages/lf20_gtbdf5vn.json")
 school_logo = lottie_load_url("https://assets4.lottiefiles.com/packages/lf20_hp1tf5fx.json")
 linkedin_logo = lottie_load_url("https://assets8.lottiefiles.com/private_files/lf30_tgzwnxcf.json")
@@ -189,6 +189,6 @@ with st.container():
     with left:
         st.markdown(contact_form,unsafe_allow_html=True)
     with right:
-        with open("/Users/aditewari/Desktop/website/contact_me.json","r") as r:
+        with open("contact_me.json","r") as r:
             contact_me = json.load(r)
         st.lottie(contact_me,height=300,width=525)
