@@ -33,6 +33,8 @@ linkedin_logo = lottie_load_url("https://assets8.lottiefiles.com/private_files/l
 phone_logo = lottie_load_url("https://assets5.lottiefiles.com/private_files/lf30_ad0z9wuy.json")
 git_logo = lottie_load_url("https://assets10.lottiefiles.com/packages/lf20_6HFXXE.json")
 logo_email = lottie_load_url("https://assets10.lottiefiles.com/packages/lf20_d3vw5gid.json")
+resume_logo = lottie_load_url("https://lottie.host/a999f5db-2da5-4ce1-8d68-7df35c7df39b/NbF24GEZO0.json")
+lifting_logo = lottie_load_url("https://lottie.host/6082eac7-4131-4101-8103-16bb6df08886/vyvhsbdxxz.json")
 
 with open(resume_file, "rb") as pdf_file:
     PDFbyte = pdf_file.read()
@@ -44,14 +46,11 @@ with st.container():
         st.title("Hi, I'm Aditya :wave:")
         st.write("I am a Student at UW-Madison who passionate about using Python, R, SQL, and much more. for Data Science and Analytics")
 
-        left,pre_pre_middle,pre_middle,pre_pre_right,pre_right = st.columns((1,0.25,0.8,0.25,1))
+        pre_left,left,pre_pre_middle,pre_middle,pre_pre_right,pre_right = st.columns((0.3,1,0.25,1,0.25,1))
+        with pre_left:
+            st_lottie(resume_logo,width=30)
         with left:
-            st.download_button(
-            label=" 📄 Resume",
-            data=PDFbyte,
-            file_name="Aditya's Resume",
-            mime="application/octet-stream",
-        )
+            st.write("[Resume](https://drive.google.com/file/d/1KAfmlX31EW8v7wFK7kpveLTsHDpUgIAc/view?usp=sharing)")
         with pre_pre_middle:
             st_lottie(linkedin_logo,width=20)
         with pre_middle:
@@ -67,7 +66,7 @@ with st.container():
         st.image(profile_photo,width=350)
 
     with right:
-        st.title(" Data Scientist based in Madison,WI ",)
+        st.title("Data Scientist based out of Madison,WI",)
 
         number_logo,number,email_logo,email = st.columns((0.15,0.5,0.15,0.8))
         with number_logo:
@@ -77,7 +76,7 @@ with st.container():
         with email_logo:
             st_lottie(logo_email,width=35)
         with email:
-            st.write("[atewari3@wisc.edu](mailto:atewari3@wisc.edu)")
+            st.write("[ATEWARI3@WISC.EDU](mailto:atewari3@wisc.edu)")
 
 
  #technical skills   
@@ -166,6 +165,32 @@ with st.container():
     
     with right:
         st_lottie(lottie_coding,height=500,width=550)
+
+with st.container():
+    st.write("---")
+    left,right = st.columns((2,1))
+    with left:
+        st.subheader("Extracurriculars")
+        st.subheader("McBurney Disability Resource Center | Notetaker | September 2021 - present | Madison, WI")
+        st.write("- The Mcburney Disability Center uses my notes to assist students who may have difficulty taking notes in class or may not be able to.")
+        
+        st.subheader("Badger volunteers | volunteer | January 2022 - present | Madison, WI")
+        st.write("""- I work with a different volunteering project on a semester to semester basis to help either community in Madison or community partners abroad. 
+                    - Currently, I volunteer with a conversational English project in India to help call tech center workers with collequialisms.""")
+        
+        st.subheader("Greater University Tutoring Services | Tutor | September 2022 -  September 2023 | Madison, WI")
+        st.write("""
+        - As a tutor for the Greater University Tutoring Services, I tutored general chemistry. 
+        - In particular, I helped with exam and quiz preparation, visualizing theoretical chemistry concepts, and arithmetic calculations in chemistry
+    """)
+
+        st.subheader("Badger Powerlifting | Competitor | January 2022 - present |  Madison, WI")
+        st.write("""
+        - I complete, train, and volunteer with the badger powerlifting team. 
+        - We hold powerlifting meets every year and try to promotes a healthy lifestyle through weight lifting and friendly competition. 
+    """)
+    with right:
+        st_lottie(lifting_logo,height=500,width=550)
 
 
 with st.container():
