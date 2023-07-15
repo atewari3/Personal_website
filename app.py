@@ -44,7 +44,7 @@ with st.container():
     left,useless,middle,right = st.columns((1,0.12,1,1))
     with left:
         st.title("Hi, I'm Aditya :wave:")
-        st.write("I am a Student at UW-Madison who passionate about using Python, R, SQL, and much more. for Data Science and Analytics")
+        st.write("I am a Student at UW-Madison who is passionate about using Python, R, SQL, and much more. for Data Science and Analytics")
 
         pre_left,left,pre_pre_middle,pre_middle,pre_pre_right,pre_right = st.columns((0.3,1,0.25,1,0.25,1))
         with pre_left:
